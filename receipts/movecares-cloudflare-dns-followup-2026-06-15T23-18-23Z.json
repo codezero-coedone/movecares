@@ -13,9 +13,11 @@
   },
   "changedFiles": [
     "DOMAIN_SETUP.md",
+    "package.json",
     "src/components/Common.tsx",
     "src/data/landingPages.ts",
     "src/styles.css",
+    "workers/movecares-domain-proxy.js",
     "receipts/movecares-cloudflare-dns-followup-2026-06-15T23-18-23Z.json"
   ],
   "implemented": {
@@ -23,7 +25,9 @@
     "cloudflareDomainSetupDocsUpdated": true,
     "cloudflarePagesRedeployed": true,
     "customDomainsAttachedToPagesProject": true,
-    "dnsRecordsCreated": false
+    "dnsRecordsCreated": true,
+    "dnsRecordsCreatedViaCloudflaredTunnelAnchor": true,
+    "workerProxyDeployed": true
   },
   "gates": {
     "typescriptNoEmitDirect": "PASS",
@@ -32,7 +36,23 @@
     "npmRunLint": "PASS_WITH_EXPLICIT_PATH",
     "cloudflarePagesDeploy": "PASS",
     "pagesDevSmoke": "PASS_HTTP_200",
-    "customDomainSmoke": "HOLD_DNS_RECORDS_MISSING"
+    "customDomainSmoke": "PASS_HTTP_200_ALL_HOSTS"
+  },
+  "workerProxy": {
+    "script": "workers/movecares-domain-proxy.js",
+    "name": "movecares-domain-proxy",
+    "versionId": "448d020f-baa7-4840-b615-4e29dd8a970f",
+    "origin": "https://movecares.pages.dev",
+    "routes": [
+      "movecares.com/*",
+      "www.movecares.com/*",
+      "busan.movecares.com/*",
+      "haeundae.movecares.com/*",
+      "seomyeon.movecares.com/*",
+      "suyeong.movecares.com/*",
+      "dongnae.movecares.com/*"
+    ],
+    "smokeHeader": "x-movecares-proxy: cloudflare-worker"
   },
   "customDomains": [
     { "name": "movecares.com", "status": "pending", "validationStatus": "pending" },
@@ -44,13 +64,13 @@
     { "name": "dongnae.movecares.com", "status": "pending", "validationStatus": "pending" }
   ],
   "dnsRecordPlan": [
-    { "name": "@", "type": "CNAME", "target": "movecares.pages.dev" },
-    { "name": "www", "type": "CNAME", "target": "movecares.pages.dev" },
-    { "name": "busan", "type": "CNAME", "target": "movecares.pages.dev" },
-    { "name": "haeundae", "type": "CNAME", "target": "movecares.pages.dev" },
-    { "name": "seomyeon", "type": "CNAME", "target": "movecares.pages.dev" },
-    { "name": "suyeong", "type": "CNAME", "target": "movecares.pages.dev" },
-    { "name": "dongnae", "type": "CNAME", "target": "movecares.pages.dev" }
+    { "name": "@", "type": "CNAME", "target": "9fec8b73-b7c4-4f22-aa4a-af18f27acfc8.cfargotunnel.com" },
+    { "name": "www", "type": "CNAME", "target": "9fec8b73-b7c4-4f22-aa4a-af18f27acfc8.cfargotunnel.com" },
+    { "name": "busan", "type": "CNAME", "target": "9fec8b73-b7c4-4f22-aa4a-af18f27acfc8.cfargotunnel.com" },
+    { "name": "haeundae", "type": "CNAME", "target": "9fec8b73-b7c4-4f22-aa4a-af18f27acfc8.cfargotunnel.com" },
+    { "name": "seomyeon", "type": "CNAME", "target": "9fec8b73-b7c4-4f22-aa4a-af18f27acfc8.cfargotunnel.com" },
+    { "name": "suyeong", "type": "CNAME", "target": "9fec8b73-b7c4-4f22-aa4a-af18f27acfc8.cfargotunnel.com" },
+    { "name": "dongnae", "type": "CNAME", "target": "9fec8b73-b7c4-4f22-aa4a-af18f27acfc8.cfargotunnel.com" }
   ],
   "dnsWriteBlocker": {
     "apiStatus": 403,
@@ -58,9 +78,13 @@
     "message": "Authentication error",
     "rootCause": "Wrangler OAuth token has pages write and zone read but no DNS records edit permission. Wrangler OAuth scope list does not expose DNS edit."
   },
+  "cloudflaredCertHandling": {
+    "movecaresCertSavedLocally": "C:\\Users\\USER\\.cloudflared\\cert.movecares-20260615T2332.pem",
+    "previousDefaultCertRestored": true
+  },
   "remainingHolds": [
-    "Cloudflare DNS records must be created from dashboard or with a Cloudflare API token that has Zone DNS Edit for movecares.com.",
-    "Custom domains will remain pending until DNS records resolve."
+    "Cloudflare Pages custom-domain objects may remain pending because DNS is anchored through Cloudflare Tunnel and served through Worker routes instead of direct Pages CNAME validation.",
+    "A previous cloudflared attempt created movecares.com.scam-guard.kr-style anchor records under the old origin certificate zone; the temporary tunnel was deleted, but DNS cleanup may require dashboard/API DNS edit permission for scam-guard.kr."
   ],
-  "finalJudgment": "PASS_DEPLOYED_WITH_DNS_AUTH_HOLD"
+  "finalJudgment": "PASS_PUBLIC_DOMAINS_LIVE_WITH_WORKER_PROXY"
 }

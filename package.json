@@ -7,7 +7,8 @@
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "lint": "tsc --noEmit",
-    "deploy:cf": "npm run build && wrangler pages deploy dist --project-name movecares --branch main --commit-dirty=true"
+    "deploy:cf": "npm run build && wrangler pages deploy dist --project-name movecares --branch main --commit-dirty=true",
+    "deploy:cf:worker": "wrangler deploy workers/movecares-domain-proxy.js --name movecares-domain-proxy --compatibility-date 2026-06-15 --route movecares.com/* --route www.movecares.com/* --route busan.movecares.com/* --route haeundae.movecares.com/* --route seomyeon.movecares.com/* --route suyeong.movecares.com/* --route dongnae.movecares.com/*"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.0",

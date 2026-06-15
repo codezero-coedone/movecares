@@ -14,9 +14,11 @@ This app is a single Vite/TanStack React deployment that serves the main site an
 | `suyeong.movecares.com` | 수영 출장 마사지 landing |
 | `dongnae.movecares.com` | 동래 출장 마사지 landing |
 
-## Cloudflare Pages setup
+## Cloudflare runtime setup
 
-Attach all hosts above to the same Cloudflare Pages project: `movecares`. The app detects the hostname at runtime and renders the correct surface.
+The React app is deployed to Cloudflare Pages project `movecares`.
+Production traffic is currently served by a Cloudflare Worker proxy on the custom domains.
+The app detects the browser hostname at runtime and renders the correct surface.
 
 The SPA rewrite is already configured in `public/_redirects`:
 
@@ -44,22 +46,34 @@ Local QA routes remain available:
 - `/dongnae-chuljang-massage`
 - `/landing-index`
 
-## DNS note
+## DNS and Worker note
 
-The current Cloudflare Pages target is:
+Current Pages origin:
 
 - `movecares.pages.dev`
 
-Create or verify these records in Cloudflare DNS, unless the Pages custom-domain screen shows a different validation target:
+Current public-domain serving path:
 
-| Name | Type | Target |
-| --- | --- | --- |
-| `@` | CNAME | `movecares.pages.dev` |
-| `www` | CNAME | `movecares.pages.dev` |
-| `busan` | CNAME | `movecares.pages.dev` |
-| `haeundae` | CNAME | `movecares.pages.dev` |
-| `seomyeon` | CNAME | `movecares.pages.dev` |
-| `suyeong` | CNAME | `movecares.pages.dev` |
-| `dongnae` | CNAME | `movecares.pages.dev` |
+```txt
+custom domain DNS -> movecares-dns-anchor Cloudflare Tunnel DNS record -> movecares-domain-proxy Worker route -> movecares.pages.dev
+```
 
-Cloudflare supports CNAME flattening at the apex. Keep proxy enabled unless Pages validation explicitly asks otherwise.
+The Worker script lives at:
+
+- `workers/movecares-domain-proxy.js`
+
+The Worker is deployed with these routes:
+
+- `movecares.com/*`
+- `www.movecares.com/*`
+- `busan.movecares.com/*`
+- `haeundae.movecares.com/*`
+- `seomyeon.movecares.com/*`
+- `suyeong.movecares.com/*`
+- `dongnae.movecares.com/*`
+
+The Worker adds this response header for smoke checks:
+
+- `x-movecares-proxy: cloudflare-worker`
+
+Note: Cloudflare Pages custom-domain records may still show `pending` because DNS points to the tunnel anchor rather than directly to `movecares.pages.dev`. Public traffic is still live through the Worker route.
