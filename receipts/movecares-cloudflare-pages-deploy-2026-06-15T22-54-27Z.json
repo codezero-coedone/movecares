@@ -1,0 +1,64 @@
+{
+  "lock": "MOVECARES_CLOUDFLARE_PAGES_DEPLOY_V1",
+  "timestamp": "2026-06-15T22:54:27Z",
+  "repo": "C:\\Users\\USER\\Documents\\New project",
+  "previousGitHead": "70ae8c514b49400023ab71e76dee4658cde4ffb3",
+  "cloudflare": {
+    "accountId": "3b0bd76ccf8d28104a7abb8fad86a485",
+    "accountName": "Ejdzm90@gmail.com's Account",
+    "wranglerVersion": "4.100.0",
+    "projectName": "movecares",
+    "projectCreated": true,
+    "productionBranch": "main",
+    "deploymentUrl": "https://4fe957af.movecares.pages.dev",
+    "deploymentId": "4fe957af-048f-42ab-95bd-514d7ae0c23c",
+    "deployCommand": "wrangler pages deploy dist --project-name movecares --branch main --commit-dirty=true",
+    "deployResult": "PASS"
+  },
+  "customDomains": {
+    "attachAttempted": true,
+    "attachResult": "PASS_PENDING_VALIDATION",
+    "domains": [
+      { "name": "movecares.com", "status": "pending", "validationStatus": "pending" },
+      { "name": "www.movecares.com", "status": "pending", "validationStatus": "pending" },
+      { "name": "busan.movecares.com", "status": "pending", "validationStatus": "pending" },
+      { "name": "haeundae.movecares.com", "status": "pending", "validationStatus": "pending" },
+      { "name": "seomyeon.movecares.com", "status": "pending", "validationStatus": "pending" },
+      { "name": "suyeong.movecares.com", "status": "pending", "validationStatus": "pending" },
+      { "name": "dongnae.movecares.com", "status": "pending", "validationStatus": "pending" }
+    ],
+    "dnsWriteAttempted": true,
+    "dnsWriteResult": "HOLD_AUTHENTICATION_ERROR",
+    "dnsWriteNote": "Current Wrangler OAuth token allowed Pages write and zone read, but DNS records API returned Authentication error. DNS records still need to be created or token refreshed with DNS edit permissions."
+  },
+  "changedFiles": [
+    "public/_redirects",
+    "package.json",
+    "receipts/movecares-cloudflare-pages-deploy-2026-06-15T22-54-27Z.json"
+  ],
+  "gates": {
+    "wranglerWhoami": "PASS",
+    "pagesProjectCreate": "PASS",
+    "npmRunBuild": "PASS",
+    "npmRunLint": "PASS",
+    "distRedirects": "PASS",
+    "pagesDeploy": "PASS",
+    "pagesProjectList": "PASS",
+    "pagesDeploymentList": "PASS",
+    "customDomainAttach": "PASS_PENDING",
+    "dnsRecordsWrite": "HOLD_AUTH",
+    "publicHttpsSmoke": "HOLD_LOCAL_TLS_OR_CLIENT_BLOCK"
+  },
+  "publicSmoke": {
+    "pagesDevBrowser": "HOLD_ERR_BLOCKED_BY_CLIENT",
+    "pagesDevCurl": "HOLD_SCHANNEL_TLS",
+    "cloudflareDeploymentEvidence": "wrangler deployment complete and deployment list showed production deployment URL"
+  },
+  "remainingHolds": [
+    "Create or confirm DNS records for movecares.com and the six hostnames in Cloudflare DNS.",
+    "Expected DNS target for custom domain validation is the Pages project domain movecares.pages.dev unless Cloudflare dashboard shows a different instruction.",
+    "After DNS validation, run public HTTPS smoke on movecares.com and all five landing subdomains.",
+    "Commit and push this Cloudflare deploy receipt."
+  ],
+  "finalJudgment": "PASS_DEPLOYED_WITH_DNS_HOLD"
+}

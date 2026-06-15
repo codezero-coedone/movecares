@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "deploy:cf": "npm run build && wrangler pages deploy dist --project-name movecares --branch main --commit-dirty=true"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.0",
