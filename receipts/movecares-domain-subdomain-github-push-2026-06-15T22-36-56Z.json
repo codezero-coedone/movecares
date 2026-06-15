@@ -1,0 +1,59 @@
+{
+  "lock": "MOVECARES_DOMAIN_SUBDOMAIN_GITHUB_PUSH_V1",
+  "timestamp": "2026-06-15T22:36:56Z",
+  "repo": "C:\\Users\\USER\\Documents\\New project",
+  "domain": "movecares.com",
+  "github": {
+    "remote": "https://github.com/codezero-coedone/movecares.git",
+    "branch": "main",
+    "initialRemoteHeadBeforePush": "53ffe405739900f2cf1a82b44325f187147d0f52",
+    "sourceCommitPushed": "0a4ef6aad90099f04908d8fc8f6b6e1e6a260190",
+    "pushMode": "force-with-lease",
+    "pushResult": "PASS"
+  },
+  "domainRouting": {
+    "main": "https://movecares.com/",
+    "landingSubdomains": {
+      "busan": "https://busan.movecares.com/",
+      "haeundae": "https://haeundae.movecares.com/",
+      "seomyeon": "https://seomyeon.movecares.com/",
+      "suyeong": "https://suyeong.movecares.com/",
+      "dongnae": "https://dongnae.movecares.com/"
+    },
+    "localQaRoutesKept": true,
+    "hostBasedRuntimeRouting": true
+  },
+  "changedFilesSummary": [
+    "src/data/landingPages.ts",
+    "src/hooks/usePageSeo.ts",
+    "src/router.tsx",
+    "src/pages/HomePage.tsx",
+    "src/components/Common.tsx",
+    "public/sitemap.xml",
+    "public/robots.txt",
+    "DOMAIN_SETUP.md",
+    "README.md",
+    ".gitignore"
+  ],
+  "gates": {
+    "build": "PASS",
+    "lint": "PASS",
+    "auditHigh": "PASS",
+    "browserRouteSeoSmoke": "PASS",
+    "hostnameResolverSmoke": "PASS",
+    "httpStatusSmoke": "PASS",
+    "sitemapSubdomainAuthority": "PASS",
+    "robotsAbsoluteSitemap": "PASS"
+  },
+  "notes": [
+    "The remote repository only contained README.md before the push.",
+    "The first force-with-lease push failed because origin/main tracking info was stale; after fetch, force-with-lease succeeded.",
+    "No production deploy or DNS/Vercel domain attachment was performed in this run."
+  ],
+  "remainingHolds": [
+    "Attach movecares.com, www.movecares.com, and the five landing subdomains to the deployment project.",
+    "Configure DNS records at the domain registrar or Vercel as required.",
+    "Run public HTTPS smoke after DNS propagation."
+  ],
+  "finalJudgment": "PASS_PUSHED_WITH_DEPLOY_HOLDS"
+}
