@@ -1,0 +1,119 @@
+{
+  "lock": "MASSAGE_5_LANDING_PAGES_MASTER_DISPATCH_V1__TANSTACK_DENSITY_REPAIR",
+  "timestamp": "2026-06-15T22:09:26Z",
+  "repo": "C:\\Users\\USER\\Documents\\New project",
+  "git": {
+    "available": false,
+    "note": "git command was not available in the current PATH; treated as filesystem-only workspace"
+  },
+  "readOnlyReferenceRepos": [
+    {
+      "path": "C:\\Users\\USER\\Desktop\\rigel-workroom",
+      "findings": [
+        "apps/web-pwa uses @tanstack/react-router and @tanstack/react-query",
+        "manual createRootRoute/createRoute/createRouter route tree",
+        "RouterProvider wrapped by QueryClientProvider"
+      ]
+    },
+    {
+      "path": "C:\\Users\\USER\\Desktop\\guse",
+      "findings": [
+        "store-web uses TanStack Router and QueryClientProvider",
+        "premium store shell imports shared UI surface styles",
+        "warm boutique mobile shell uses glass header, dense hero, bottom tabbar, CTA rail, and overflow guardrails"
+      ]
+    }
+  ],
+  "changedFiles": [
+    "package.json",
+    "package-lock.json",
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/router.tsx",
+    "src/components/Common.tsx",
+    "src/components/HeroVisual.tsx",
+    "src/pages/LandingIndex.tsx",
+    "src/pages/LandingPage.tsx",
+    "src/styles.css"
+  ],
+  "implemented": {
+    "tanstackRouter": true,
+    "tanstackQueryProvider": true,
+    "routeTree": [
+      "/",
+      "/landing-index",
+      "/variants",
+      "/busan-chuljang-massage",
+      "/haeundae-chuljang-massage",
+      "/seomyeon-chuljang-massage",
+      "/suyeong-chuljang-massage",
+      "/dongnae-chuljang-massage"
+    ],
+    "premiumDensityRepair": [
+      "glass header and active route pills",
+      "mobile bottom route tabbar",
+      "heavier CTA rail",
+      "premium service card media slabs",
+      "hero visual top detail primitives",
+      "QA index moved into the same app shell"
+    ],
+    "screenshotReplay": false,
+    "rasterOverlay": false,
+    "referencePngEmbedded": false
+  },
+  "gates": {
+    "npmInstall": "PASS_PREVIOUS",
+    "npmRunBuild": "PASS",
+    "npmRunLint": "PASS",
+    "npmAuditHigh": "PASS",
+    "devServer": "PASS_RUNNING_127.0.0.1:5176",
+    "browserDomSmoke": "PASS",
+    "httpStatusSmoke": "PASS",
+    "robotsTxt": "PASS",
+    "sitemapXml": "PASS",
+    "vercelRewrite": "PASS"
+  },
+  "browserSmoke": {
+    "tool": "Browser in-app viewport capability",
+    "viewports": [390, 430, 768, 1440],
+    "routesChecked": 7,
+    "checksTotal": 28,
+    "failures": [],
+    "checks": [
+      "no horizontal overflow",
+      "tel links equal tel:01067825758",
+      "phone CTA visible in first viewport",
+      "title present",
+      "h1 present",
+      "meta description present",
+      "canonical present",
+      "no broken images",
+      "movecare store shell present",
+      "mobile tabbar present"
+    ]
+  },
+  "httpSmoke": {
+    "/": 200,
+    "/landing-index": 200,
+    "/busan-chuljang-massage": 200,
+    "/haeundae-chuljang-massage": 200,
+    "/seomyeon-chuljang-massage": 200,
+    "/suyeong-chuljang-massage": 200,
+    "/dongnae-chuljang-massage": 200
+  },
+  "seo": {
+    "routeUniqueTitle": true,
+    "routeUniqueH1": true,
+    "routeMetaDescription": true,
+    "canonicalRuntimeOrigin": true,
+    "faqJsonLd": true,
+    "noFakeAddress": true,
+    "noFakeReviews": true
+  },
+  "remainingHolds": [
+    "VITE_SITE_URL should be supplied before public deployment so sitemap/canonical point at the final domain",
+    "No production deployment was requested or performed",
+    "In-app browser screenshot capture timed out once for one extra visual capture attempt; DOM smoke and HTTP smoke passed after that"
+  ],
+  "finalJudgment": "PASS_MASSAGE_5_LANDING_PAGES"
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://movecares.com/sitemap.xml

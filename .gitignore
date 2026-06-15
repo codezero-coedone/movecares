@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vite/
+.vercel/
+*.local
+.env
+.env.*
+!.env.example
+dev-server.*.log
+qa/chrome-profile/
+qa/screenshots/

@@ -1,0 +1,102 @@
+{
+  "lock": "MASSAGE_5_LANDING_PAGES_MASTER_DISPATCH_V1",
+  "timestamp": "2026-06-15T21-45-05Z",
+  "repo": "C:\\Users\\USER\\Documents\\New project",
+  "referenceFolder": "C:\\Users\\USER\\Desktop\\부산달리\\랜딩",
+  "implementation": {
+    "stack": "Vite 8 + React 19 + TypeScript + Tailwind CSS",
+    "routing": "window.location.pathname route switch with Vercel SPA rewrite",
+    "assetPolicy": "DOM/CSS/SVG visuals only; reference PNGs were not embedded or replayed",
+    "phoneHref": "tel:01067825758",
+    "canonicalPolicy": "VITE_SITE_URL when set, otherwise runtime window.location.origin"
+  },
+  "routes": [
+    "/landing-index",
+    "/busan-chuljang-massage",
+    "/haeundae-chuljang-massage",
+    "/seomyeon-chuljang-massage",
+    "/suyeong-chuljang-massage",
+    "/dongnae-chuljang-massage"
+  ],
+  "changedFiles": [
+    "package.json",
+    "package-lock.json",
+    "index.html",
+    "vite.config.ts",
+    "tsconfig.json",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "vercel.json",
+    "public/favicon.svg",
+    "public/robots.txt",
+    "public/sitemap.xml",
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/styles.css",
+    "src/vite-env.d.ts",
+    "src/data/landingPages.ts",
+    "src/hooks/usePageSeo.ts",
+    "src/components/Common.tsx",
+    "src/components/HeroVisual.tsx",
+    "src/components/Icons.tsx",
+    "src/pages/LandingIndex.tsx",
+    "src/pages/LandingPage.tsx",
+    "qa/browser-smoke-report.json",
+    "qa/screenshots/*.png",
+    "receipts/massage-5-landing-pages-master-dispatch-v1-2026-06-15T21-45-05Z.json"
+  ],
+  "gates": {
+    "npmInstall": "PASS",
+    "npmRunBuild": "PASS",
+    "npmRunLint": "PASS",
+    "npmRunDev": "PASS",
+    "npmAuditHigh": "PASS",
+    "browserSmoke": "PASS",
+    "responsive": {
+      "390": "PASS",
+      "430": "PASS",
+      "768": "PASS",
+      "1440": "PASS"
+    },
+    "routesOpen": "PASS",
+    "consoleErrors": "PASS",
+    "horizontalOverflow": "PASS",
+    "brokenImages": "PASS",
+    "faqAccordion": "PASS",
+    "telCta": "PASS",
+    "seo": "PASS",
+    "safeSchema": "PASS"
+  },
+  "browserSmoke": {
+    "base": "http://127.0.0.1:5176",
+    "report": "qa/browser-smoke-report.json",
+    "screenshotDir": "qa/screenshots",
+    "allPass": true
+  },
+  "pageStatus": {
+    "LP01_BUSAN_MAIN_WHITE_CTA_IMPLEMENT_V1": "PASS",
+    "LP02_HAEUNDAE_PREMIUM_GRID_IMPLEMENT_V1": "PASS",
+    "LP03_SEOMYEON_EDITORIAL_VARIANT_IMPLEMENT_V1": "PASS",
+    "LP04_SUYEONG_TRUST_MAP_IMPLEMENT_V1": "PASS",
+    "LP05_DONGNAE_MINIMAL_CTA_FOCUS_IMPLEMENT_V1": "PASS"
+  },
+  "seoStatus": {
+    "routeSpecificTitle": "PASS",
+    "routeSpecificH1": "PASS",
+    "routeSpecificMetaDescription": "PASS",
+    "canonical": "PASS",
+    "robotsTxt": "PASS",
+    "sitemapXml": "PASS",
+    "faqJsonLd": "PASS",
+    "localBusinessJsonLdWithoutAddressReviewRating": "PASS"
+  },
+  "antiReplay": {
+    "screenshotReplay": "PASS",
+    "rasterReferenceEmbedding": "PASS",
+    "sourceSearchForImageExtensions": "PASS"
+  },
+  "remainingHolds": [
+    "Production domain is not set; set VITE_SITE_URL before final public deployment so sitemap/canonical use the chosen domain."
+  ],
+  "finalJudgment": "PASS_MASSAGE_5_LANDING_PAGES"
+}
