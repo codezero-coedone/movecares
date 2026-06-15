@@ -28,8 +28,8 @@
   "gates": {
     "typescriptNoEmitDirect": "PASS",
     "viteBuildDirect": "PASS",
-    "npmRunBuild": "HOLD_PATH_ACCESS_DENIED_IN_SCRIPT_SPAWN",
-    "npmRunLint": "HOLD_PATH_ACCESS_DENIED_IN_SCRIPT_SPAWN",
+    "npmRunBuild": "PASS_WITH_EXPLICIT_PATH",
+    "npmRunLint": "PASS_WITH_EXPLICIT_PATH",
     "cloudflarePagesDeploy": "PASS",
     "pagesDevSmoke": "PASS_HTTP_200",
     "customDomainSmoke": "HOLD_DNS_RECORDS_MISSING"
