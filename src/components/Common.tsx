@@ -47,7 +47,7 @@ export function Header({ dense = false, compact = false }: { dense?: boolean; co
         {dense ? (
           <a href={PHONE_TEL} className="hidden text-center sm:block">
             <span className="block text-lg font-semibold text-text-main">{PHONE_DISPLAY}</span>
-            <span className="text-xs text-text-muted">24시간 상담 가능</span>
+            <span className="text-xs text-text-muted">운영 가능 시간 상담</span>
           </a>
         ) : null}
         <div className="flex items-center gap-2 sm:gap-3">
@@ -148,19 +148,19 @@ export function FAQAccordion({ items }: { items: FaqItem[] }) {
 
 export function StickyCallBar({ split = false }: { split?: boolean }) {
   return (
-    <div className="sticky bottom-4 z-30 mx-auto hidden max-w-[1180px] px-5 md:block">
-      <div className="movecare-sticky-call flex items-center justify-between gap-4 rounded-3xl bg-charcoal p-4 text-white shadow-cta">
+    <div className="fixed bottom-6 right-6 z-30 hidden w-[min(380px,calc(100%-48px))] md:block">
+      <div className="movecare-sticky-call flex items-center justify-between gap-3 rounded-[1.45rem] bg-charcoal p-3 text-white shadow-cta">
         <div className="flex min-w-0 items-center gap-4">
-          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white text-charcoal"><Icon name="phone" className="h-6 w-6" /></span>
+          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-[1rem] bg-white text-charcoal"><Icon name="phone" className="h-5 w-5" /></span>
           <div className="min-w-0">
-            <p className="text-sm text-white/70">빠른 상담 & 예약</p>
-            <p className="truncate text-xl font-bold tracking-wide">{PHONE_DISPLAY}</p>
+            <p className="text-xs text-white/70">빠른 상담 & 예약</p>
+            <p className="truncate text-lg font-bold tracking-wide">{PHONE_DISPLAY}</p>
           </div>
         </div>
         {split ? (
-          <a href={PHONE_TEL} className="rounded-2xl bg-white px-7 py-4 text-sm font-bold text-charcoal">지금 전화하기</a>
+          <a href={PHONE_TEL} className="rounded-[1rem] bg-white px-4 py-3 text-sm font-bold text-charcoal">전화</a>
         ) : (
-          <a href={PHONE_TEL} className="rounded-2xl bg-white px-7 py-4 text-sm font-bold text-charcoal">전화 연결</a>
+          <a href={PHONE_TEL} className="rounded-[1rem] bg-white px-4 py-3 text-sm font-bold text-charcoal">전화</a>
         )}
       </div>
     </div>

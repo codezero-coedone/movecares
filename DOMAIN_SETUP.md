@@ -14,16 +14,14 @@ This app is a single Vite/TanStack React deployment that serves the main site an
 | `suyeong.movecares.com` | 수영 출장 마사지 landing |
 | `dongnae.movecares.com` | 동래 출장 마사지 landing |
 
-## Vercel setup
+## Cloudflare Pages setup
 
-Attach all hosts above to the same Vercel project. The app detects the hostname at runtime and renders the correct surface.
+Attach all hosts above to the same Cloudflare Pages project: `movecares`. The app detects the hostname at runtime and renders the correct surface.
 
-The SPA rewrite is already configured in `vercel.json`:
+The SPA rewrite is already configured in `public/_redirects`:
 
-```json
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
+```txt
+/* /index.html 200
 ```
 
 ## Canonical URLs
@@ -48,4 +46,20 @@ Local QA routes remain available:
 
 ## DNS note
 
-Set DNS records according to the deployment provider's instructions. For Vercel, apex and subdomain records are normally added after the domains are attached in the project settings.
+The current Cloudflare Pages target is:
+
+- `movecares.pages.dev`
+
+Create or verify these records in Cloudflare DNS, unless the Pages custom-domain screen shows a different validation target:
+
+| Name | Type | Target |
+| --- | --- | --- |
+| `@` | CNAME | `movecares.pages.dev` |
+| `www` | CNAME | `movecares.pages.dev` |
+| `busan` | CNAME | `movecares.pages.dev` |
+| `haeundae` | CNAME | `movecares.pages.dev` |
+| `seomyeon` | CNAME | `movecares.pages.dev` |
+| `suyeong` | CNAME | `movecares.pages.dev` |
+| `dongnae` | CNAME | `movecares.pages.dev` |
+
+Cloudflare supports CNAME flattening at the apex. Keep proxy enabled unless Pages validation explicitly asks otherwise.

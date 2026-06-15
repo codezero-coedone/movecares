@@ -170,7 +170,7 @@ function PremiumPage({ page }: { page: LandingPage }) {
             <div>
               <p className="text-xl font-semibold text-text-main">지금 바로 전화 문의</p>
               <p className="mt-2 text-4xl font-bold tracking-tight">{PHONE_DISPLAY}</p>
-              <p className="mt-2 text-text-sub">24시간 상담 및 예약 가능</p>
+              <p className="mt-2 text-text-sub">이용 지역과 시간 확인 후 안내</p>
             </div>
             <CallButton label="전화 문의" />
           </div>
@@ -210,8 +210,8 @@ function EditorialPage({ page }: { page: LandingPage }) {
         </section>
         <section className="rounded-3xl border border-border-soft bg-white p-6 shadow-soft md:flex md:items-center md:justify-between">
           <div>
-            <p className="text-xl font-semibold">지금 바로 편안함을 경험하세요</p>
-            <p className="mt-2 text-text-sub">24시간 상담 가능 | 지역과 시간을 먼저 확인합니다.</p>
+            <p className="text-xl font-semibold">방문 가능 여부를 먼저 확인하세요</p>
+            <p className="mt-2 text-text-sub">지역과 시간을 확인한 뒤 예약 방법을 안내합니다.</p>
           </div>
           <CallButton label={`전화 문의 ${PHONE_DISPLAY}`} />
         </section>
@@ -236,7 +236,7 @@ function TrustPage({ page }: { page: LandingPage }) {
           <div>
             <p className="text-sm text-white/65">지금 바로 전화 상담</p>
             <p className="mt-2 text-4xl font-bold">{PHONE_DISPLAY}</p>
-            <p className="mt-2 text-white/65">24시간 상담 가능</p>
+            <p className="mt-2 text-white/65">지역과 시간 확인 후 안내</p>
           </div>
           <a href={PHONE_TEL} className="mt-5 inline-flex rounded-2xl bg-white px-8 py-4 font-bold text-charcoal md:mt-0">지금 전화하기</a>
         </section>

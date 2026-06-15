@@ -66,6 +66,13 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 button,
 summary {
   -webkit-tap-highlight-color: transparent;

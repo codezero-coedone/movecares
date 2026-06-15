@@ -1,0 +1,66 @@
+{
+  "lock": "MASSAGE_5_LANDING_PAGES_CLOUDFLARE_DNS_FOLLOWUP",
+  "timestamp": "2026-06-15T23-18-23Z",
+  "repo": "C:\\Users\\USER\\Documents\\New project",
+  "cloudflare": {
+    "accountId": "3b0bd76ccf8d28104a7abb8fad86a485",
+    "zone": "movecares.com",
+    "zoneId": "59db4199b063576b02f823ec85bd3f01",
+    "pagesProject": "movecares",
+    "latestDeploymentId": "af13b9d6-dadc-430e-9fca-1ab519e7cf03",
+    "latestDeploymentUrl": "https://af13b9d6.movecares.pages.dev",
+    "productionUrl": "https://movecares.pages.dev"
+  },
+  "changedFiles": [
+    "DOMAIN_SETUP.md",
+    "src/components/Common.tsx",
+    "src/data/landingPages.ts",
+    "src/styles.css",
+    "receipts/movecares-cloudflare-dns-followup-2026-06-15T23-18-23Z.json"
+  ],
+  "implemented": {
+    "subdomainCanonicalRestored": true,
+    "cloudflareDomainSetupDocsUpdated": true,
+    "cloudflarePagesRedeployed": true,
+    "customDomainsAttachedToPagesProject": true,
+    "dnsRecordsCreated": false
+  },
+  "gates": {
+    "typescriptNoEmitDirect": "PASS",
+    "viteBuildDirect": "PASS",
+    "npmRunBuild": "HOLD_PATH_ACCESS_DENIED_IN_SCRIPT_SPAWN",
+    "npmRunLint": "HOLD_PATH_ACCESS_DENIED_IN_SCRIPT_SPAWN",
+    "cloudflarePagesDeploy": "PASS",
+    "pagesDevSmoke": "PASS_HTTP_200",
+    "customDomainSmoke": "HOLD_DNS_RECORDS_MISSING"
+  },
+  "customDomains": [
+    { "name": "movecares.com", "status": "pending", "validationStatus": "pending" },
+    { "name": "www.movecares.com", "status": "pending", "validationStatus": "pending" },
+    { "name": "busan.movecares.com", "status": "pending", "validationStatus": "pending" },
+    { "name": "haeundae.movecares.com", "status": "pending", "validationStatus": "pending" },
+    { "name": "seomyeon.movecares.com", "status": "pending", "validationStatus": "pending" },
+    { "name": "suyeong.movecares.com", "status": "pending", "validationStatus": "pending" },
+    { "name": "dongnae.movecares.com", "status": "pending", "validationStatus": "pending" }
+  ],
+  "dnsRecordPlan": [
+    { "name": "@", "type": "CNAME", "target": "movecares.pages.dev" },
+    { "name": "www", "type": "CNAME", "target": "movecares.pages.dev" },
+    { "name": "busan", "type": "CNAME", "target": "movecares.pages.dev" },
+    { "name": "haeundae", "type": "CNAME", "target": "movecares.pages.dev" },
+    { "name": "seomyeon", "type": "CNAME", "target": "movecares.pages.dev" },
+    { "name": "suyeong", "type": "CNAME", "target": "movecares.pages.dev" },
+    { "name": "dongnae", "type": "CNAME", "target": "movecares.pages.dev" }
+  ],
+  "dnsWriteBlocker": {
+    "apiStatus": 403,
+    "cloudflareCode": 10000,
+    "message": "Authentication error",
+    "rootCause": "Wrangler OAuth token has pages write and zone read but no DNS records edit permission. Wrangler OAuth scope list does not expose DNS edit."
+  },
+  "remainingHolds": [
+    "Cloudflare DNS records must be created from dashboard or with a Cloudflare API token that has Zone DNS Edit for movecares.com.",
+    "Custom domains will remain pending until DNS records resolve."
+  ],
+  "finalJudgment": "PASS_DEPLOYED_WITH_DNS_AUTH_HOLD"
+}
