@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { BRAND_SUB, PHONE_DISPLAY, PHONE_TEL, ROOT_ORIGIN, type LandingPage } from "../data/landingPages";
+import { BRAND_SUB, PHONE_DISPLAY, PHONE_TEL, type LandingPage } from "../data/landingPages";
 import { usePageSeo } from "../hooks/usePageSeo";
 import { CallButton, FAQAccordion, Header, LandingTabBar, RegionChips, SectionTitle, ServiceCard, StepFlow, StickyCallBar, TrustBadges } from "../components/Common";
 import { HeroWellnessVisual, MapSilhouette } from "../components/HeroVisual";
@@ -12,17 +12,6 @@ function AnchorButton({ href, label }: { href: string; label: string }) {
       className="inline-flex min-h-[54px] items-center justify-center rounded-[1.15rem] border border-border-mid bg-white/88 px-5 text-base font-extrabold tracking-[-0.02em] text-text-main shadow-[0_10px_28px_rgba(35,38,43,0.055)] transition hover:border-warm/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm active:scale-[0.99]"
     >
       {label}
-    </a>
-  );
-}
-
-function OfficialHomeButton() {
-  return (
-    <a
-      href={`${ROOT_ORIGIN}/`}
-      className="hidden min-h-[54px] items-center justify-center rounded-[1.15rem] border border-border-mid bg-white/70 px-5 text-base font-extrabold tracking-[-0.02em] text-text-main shadow-[0_10px_28px_rgba(35,38,43,0.045)] transition hover:border-warm/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm active:scale-[0.99] md:inline-flex"
-    >
-      공식 홈 보기
     </a>
   );
 }
@@ -54,7 +43,6 @@ function Footer({ dark = true }: { dark?: boolean }) {
           <span>서비스 안내</span>
           <span>이용 안내</span>
           <span>자주 묻는 질문</span>
-          <a href={`${ROOT_ORIGIN}/`} className={dark ? "font-bold text-warm transition hover:text-white" : "font-bold text-charcoal transition hover:text-warm"}>무브케어 공식 홈 보기</a>
         </div>
         <a href={PHONE_TEL} className={`self-start rounded-2xl border ${border} px-5 py-3 text-center text-sm font-bold`}>전화 문의</a>
       </div>
@@ -72,7 +60,6 @@ function Hero({ page, centered = false, objectVisual = false }: { page: LandingP
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <CallButton label="지금 전화하기" large />
           <AnchorButton href="#reservation" label="상담 방법 보기" />
-          <OfficialHomeButton />
         </div>
         <div className="movecare-quick-proof mx-auto mt-8 grid max-w-[760px] grid-cols-3 gap-3 text-left">
           {page.trust.slice(0, 3).map((item) => (
@@ -97,7 +84,6 @@ function Hero({ page, centered = false, objectVisual = false }: { page: LandingP
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CallButton label={`전화 문의 ${PHONE_DISPLAY}`} />
             <AnchorButton href="#reservation" label="상담 방법 보기" />
-            <OfficialHomeButton />
           </div>
         </div>
         <div className="relative">

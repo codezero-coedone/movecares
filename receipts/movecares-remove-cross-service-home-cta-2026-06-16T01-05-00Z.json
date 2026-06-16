@@ -1,0 +1,48 @@
+{
+  "lock": "MOVECARES_REMOVE_CROSS_SERVICE_HOME_CTA_HOTFIX",
+  "timestamp": "2026-06-16T01:05:00Z",
+  "repo": "C:\\Users\\USER\\Documents\\New project",
+  "reason": "User clarified the main home CTA created cross-service confusion. Remove visible official home links from regional landing pages and keep phone/s 상담 flow as the priority.",
+  "changedFiles": [
+    "src/components/Common.tsx",
+    "src/pages/LandingPage.tsx"
+  ],
+  "changes": {
+    "removedHeaderOfficialHomeCta": true,
+    "removedHeroDesktopOfficialHomeCta": true,
+    "removedFooterOfficialHomeCta": true,
+    "changedLogoHrefToCurrentHostRoot": true,
+    "mobileBottomCtaPreserved": true,
+    "telHrefPreserved": "tel:01067825758"
+  },
+  "verification": {
+    "npmRunLint": "PASS",
+    "npmRunBuild": "PASS",
+    "cloudflarePagesDeploy": {
+      "status": "PASS",
+      "url": "https://6acffa4a.movecares.pages.dev"
+    },
+    "liveRegionalDomainSmoke": {
+      "domains": [
+        "busan.movecares.com",
+        "haeundae.movecares.com",
+        "seomyeon.movecares.com",
+        "suyeong.movecares.com",
+        "dongnae.movecares.com"
+      ],
+      "officialHomeTextCount": 0,
+      "movecaresRootVisibleLinks": 0,
+      "logoHref": "/",
+      "bottomItems": 2,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "horizontalOverflow": false,
+      "telCtaPreserved": true
+    },
+    "movegateStringScan": "PASS_ZERO_MATCHES"
+  },
+  "remainingHolds": [
+    "SEO canonical/root config still references https://movecares.com/ where required for fixed-domain strategy; visible cross-service CTA links were removed."
+  ],
+  "finalJudgment": "PASS_REMOVE_CROSS_SERVICE_HOME_CTA"
+}
