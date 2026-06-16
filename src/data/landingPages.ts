@@ -126,7 +126,7 @@ export const landingPages: LandingPage[] = [
     id: "lp03",
     route: "/seomyeon-chuljang-massage",
     subdomain: "seomyeon",
-    title: "서면 출장 마사지 | 부산 방문 마사지 상담 안내",
+    title: "서면 출장마사지 | 부산 방문 마사지 예약 상담",
     description: "서면 출장 마사지 상담 페이지입니다. 부산진구, 전포, 부전, 범천 등 도심 생활권 방문 케어와 전화 상담을 안내합니다.",
     h1: "서면 출장 마사지",
     eyebrow: "도심 속 편안한 방문 케어",

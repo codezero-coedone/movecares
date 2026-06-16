@@ -1,0 +1,189 @@
+{
+  "lock": "MOVECARES_HEAD_CT_AND_MAIN_HOME_CTA_FINALIZE_V1",
+  "timestamp": "2026-06-16T00:53:38Z",
+  "repo": "C:\\Users\\USER\\Documents\\New project",
+  "previousLock": "MOVECARES_FIXED_DOMAINS_LIVE_CT_SEO_REPAIR_V1",
+  "previousLockStatus": "PASS",
+  "changedFiles": [
+    "src/components/Common.tsx",
+    "src/data/landingPages.ts",
+    "src/pages/LandingPage.tsx",
+    "workers/movecares-domain-proxy.js",
+    "receipts/head-ct-before/*.html",
+    "receipts/head-ct-after/*.html"
+  ],
+  "initialHtmlHeadCtBefore": {
+    "artifactDir": "receipts/head-ct-before",
+    "status": "HOLD_REPAIRED",
+    "summary": "All seven fixed domains returned the same initial SPA shell title, no meta description, no canonical, no OG tags, and no JSON-LD before this lock.",
+    "uniqueTitles": 1,
+    "commonTitle": "무브케어 | 부산 프리미엄 방문 케어",
+    "metaDescriptionPresent": false,
+    "canonicalPresent": false,
+    "ogPresent": false,
+    "faqPageJsonLdPresent": false,
+    "healthAndBeautyBusinessJsonLdPresent": false
+  },
+  "headInjection": {
+    "workerHeadInjectionNeeded": true,
+    "workerHeadInjectionImplemented": true,
+    "method": "Cloudflare Worker injects managed SEO head into text/html responses by hostname and direct route pathname.",
+    "preserved": [
+      "Worker proxy",
+      "robots.txt handler",
+      "host-aware sitemap.xml handler",
+      "React usePageSeo after-render behavior"
+    ],
+    "managedHeadFields": [
+      "title",
+      "meta description",
+      "robots",
+      "canonical",
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:url",
+      "FAQPage JSON-LD",
+      "HealthAndBeautyBusiness JSON-LD"
+    ],
+    "wwwPolicy": "www.movecares.com is served as a fixed domain with canonical https://movecares.com/.",
+    "noOgImageInjected": true,
+    "noAddressJsonLd": true,
+    "noReviewsOrRatingsJsonLd": true
+  },
+  "initialHtmlHeadCtAfter": {
+    "artifactDir": "receipts/head-ct-after",
+    "uniqueTitles": 6,
+    "movecares.com": {
+      "title": "부산출장마사지 | 무브케어 방문 마사지 예약",
+      "canonical": "https://movecares.com/",
+      "description": "PASS",
+      "og": "PASS",
+      "faqPageJsonLd": "PASS",
+      "healthAndBeautyBusinessJsonLd": "PASS"
+    },
+    "www.movecares.com": {
+      "title": "부산출장마사지 | 무브케어 방문 마사지 예약",
+      "canonical": "https://movecares.com/",
+      "description": "PASS",
+      "og": "PASS",
+      "faqPageJsonLd": "PASS",
+      "healthAndBeautyBusinessJsonLd": "PASS"
+    },
+    "busan.movecares.com": {
+      "title": "부산 출장마사지 | 해운대·서면·수영 방문 마사지 예약",
+      "canonical": "https://busan.movecares.com/",
+      "description": "PASS",
+      "og": "PASS",
+      "faqPageJsonLd": "PASS",
+      "healthAndBeautyBusinessJsonLd": "PASS"
+    },
+    "haeundae.movecares.com": {
+      "title": "해운대 출장마사지 | 부산 무브케어 방문 마사지 상담",
+      "canonical": "https://haeundae.movecares.com/",
+      "description": "PASS",
+      "og": "PASS",
+      "faqPageJsonLd": "PASS",
+      "healthAndBeautyBusinessJsonLd": "PASS"
+    },
+    "seomyeon.movecares.com": {
+      "title": "서면 출장마사지 | 부산 방문 마사지 예약 상담",
+      "canonical": "https://seomyeon.movecares.com/",
+      "description": "PASS",
+      "og": "PASS",
+      "faqPageJsonLd": "PASS",
+      "healthAndBeautyBusinessJsonLd": "PASS"
+    },
+    "suyeong.movecares.com": {
+      "title": "수영 출장마사지 | 프리미엄 방문 케어 상담",
+      "canonical": "https://suyeong.movecares.com/",
+      "description": "PASS",
+      "og": "PASS",
+      "faqPageJsonLd": "PASS",
+      "healthAndBeautyBusinessJsonLd": "PASS"
+    },
+    "dongnae.movecares.com": {
+      "title": "동래 출장마사지 | 빠른 전화 문의 방문 마사지",
+      "canonical": "https://dongnae.movecares.com/",
+      "description": "PASS",
+      "og": "PASS",
+      "faqPageJsonLd": "PASS",
+      "healthAndBeautyBusinessJsonLd": "PASS"
+    }
+  },
+  "mainHomeCta": {
+    "headerOfficialHomeCta": "PASS",
+    "footerOfficialHomeCta": "PASS",
+    "desktopSecondaryOfficialHomeCta": "PASS",
+    "officialHomeHref": "https://movecares.com/",
+    "mobileFixedCtaPreserved": "PASS",
+    "mobileBottomButtonCount": 2,
+    "phonePriorityPreserved": true
+  },
+  "verification": {
+    "npmRunLint": "PASS",
+    "npmRunBuild": "PASS",
+    "npmRunDev": "PASS",
+    "workerSyntax": "PASS",
+    "cloudflarePagesDeploy": {
+      "status": "PASS",
+      "url": "https://2c309cfe.movecares.pages.dev"
+    },
+    "cloudflareWorkerDeploy": {
+      "status": "PASS",
+      "worker": "movecares-domain-proxy",
+      "versionId": "e52c483d-1865-4236-9820-20f1898dd7a6"
+    },
+    "browserCtAfter": {
+      "domains": 7,
+      "viewports": [390, 1440],
+      "checks": 14,
+      "failures": 0,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "horizontalOverflow": false,
+      "reactHeadMatchesInitialHead": true
+    },
+    "localResponsiveSmoke": {
+      "routes": 7,
+      "viewports": [390, 430, 768, 1440],
+      "checks": 28,
+      "failures": 0,
+      "faqAccordion": "PASS"
+    },
+    "directRouteInitialHead": {
+      "https://movecares.com/seomyeon-chuljang-massage": {
+        "title": "서면 출장마사지 | 부산 방문 마사지 예약 상담",
+        "canonical": "https://seomyeon.movecares.com/",
+        "robots": "index, follow"
+      },
+      "https://movecares.com/dongnae-chuljang-massage": {
+        "title": "동래 출장마사지 | 빠른 전화 문의 방문 마사지",
+        "canonical": "https://dongnae.movecares.com/",
+        "robots": "index, follow"
+      },
+      "https://busan.movecares.com/landing-index": {
+        "title": "랜딩 페이지 5종 | 부산 무브케어 QA",
+        "canonical": "https://movecares.com/landing-index",
+        "robots": "noindex, nofollow"
+      }
+    }
+  },
+  "policy": {
+    "domainsChanged": false,
+    "googleBusinessProfileExcluded": true,
+    "telChanged": false,
+    "telHref": "tel:01067825758",
+    "noIllegalAdultWording": "PASS_WITH_ALLOWED_NEGATIVE_CONTEXT_ONLY",
+    "allowedNegativeContext": "불법·퇴폐 서비스는 제공하지 않습니다",
+    "noFakeReviews": true,
+    "noFakeRatings": true,
+    "noKeywordStuffing": true,
+    "noHiddenText": true
+  },
+  "remainingHolds": [
+    "Search Console indexing and sitemap submission state are outside this lock.",
+    "www remains fixed-domain served with canonical to movecares.com rather than a 301 redirect."
+  ],
+  "finalJudgment": "PASS_MOVECARES_HEAD_CT_AND_MAIN_HOME_CTA_FINALIZE"
+}

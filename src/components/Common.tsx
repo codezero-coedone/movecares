@@ -1,5 +1,5 @@
 import { useRouterState } from "@tanstack/react-router";
-import { getLandingHref, getMainHref, landingPages, PHONE_DISPLAY, PHONE_TEL, type FaqItem, type LandingPage, type ServiceItem, type StepItem } from "../data/landingPages";
+import { getLandingHref, getMainHref, landingPages, PHONE_DISPLAY, PHONE_TEL, ROOT_ORIGIN, type FaqItem, type LandingPage, type ServiceItem, type StepItem } from "../data/landingPages";
 import { getLandingPageByHost } from "../lib/hostMapping";
 import { Icon, LogoMark } from "./Icons";
 
@@ -45,6 +45,9 @@ export function Header({ dense = false, compact = false }: { dense?: boolean; co
             </a>
           ))}
         </nav>
+        <a href={`${ROOT_ORIGIN}/`} className="hidden rounded-full border border-border-soft bg-white/70 px-3.5 py-2 text-xs font-extrabold text-text-sub shadow-[0_8px_24px_rgba(35,38,43,0.035)] transition hover:border-warm/55 hover:text-charcoal md:inline-flex">
+          공식 홈
+        </a>
         {dense ? (
           <a href={PHONE_TEL} className="hidden text-center sm:block">
             <span className="block text-lg font-semibold text-text-main">{PHONE_DISPLAY}</span>
