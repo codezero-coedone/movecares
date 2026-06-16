@@ -1,23 +1,28 @@
 import { useEffect } from "react";
 import { BRAND, PHONE_DISPLAY, ROOT_ORIGIN, getLandingCanonical, type LandingPage } from "../data/landingPages";
+import { homeFaqs } from "../data/homeContent";
 
 export function usePageSeo(page: LandingPage) {
   useEffect(() => {
     const canonical = getLandingCanonical(page);
     document.title = page.title;
 
-    const setMeta = (name: string, content: string) => {
-      let tag = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
+    const setMeta = (attr: "name" | "property", key: string, content: string) => {
+      let tag = document.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
       if (!tag) {
         tag = document.createElement("meta");
-        tag.name = name;
+        tag.setAttribute(attr, key);
         document.head.appendChild(tag);
       }
       tag.content = content;
     };
 
-    setMeta("description", page.description);
-    setMeta("robots", "index, follow");
+    setMeta("name", "description", page.description);
+    setMeta("name", "robots", "index, follow");
+    setMeta("property", "og:title", page.title);
+    setMeta("property", "og:description", page.description);
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:url", canonical);
 
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {
@@ -60,20 +65,28 @@ export function usePageSeo(page: LandingPage) {
 
 export function useHomeSeo() {
   useEffect(() => {
-    document.title = "무브케어 | 부산 프리미엄 방문 케어";
+    const canonical = `${ROOT_ORIGIN}/`;
+    const title = "부산출장마사지 | 무브케어 방문 마사지 예약";
+    const description = "부산 출장 마사지와 방문 마사지 예약 상담을 안내하는 무브케어 공식 홈페이지입니다. 지역별 상담, 전화 문의, 예약 절차를 확인해 보세요.";
 
-    const setMeta = (name: string, content: string) => {
-      let tag = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
+    document.title = title;
+
+    const setMeta = (attr: "name" | "property", key: string, content: string) => {
+      let tag = document.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
       if (!tag) {
         tag = document.createElement("meta");
-        tag.name = name;
+        tag.setAttribute(attr, key);
         document.head.appendChild(tag);
       }
       tag.content = content;
     };
 
-    setMeta("description", "무브케어 공식 홈페이지입니다. 부산 주요 지역 방문 케어 상담, 지역별 랜딩, 전화 문의와 예약 안내를 확인해 보세요.");
-    setMeta("robots", "index, follow");
+    setMeta("name", "description", description);
+    setMeta("name", "robots", "index, follow");
+    setMeta("property", "og:title", title);
+    setMeta("property", "og:description", description);
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:url", canonical);
 
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {
@@ -81,9 +94,23 @@ export function useHomeSeo() {
       link.rel = "canonical";
       document.head.appendChild(link);
     }
-    link.href = `${ROOT_ORIGIN}/`;
+    link.href = canonical;
 
     document.querySelectorAll("[data-seo-jsonld]").forEach((node) => node.remove());
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.dataset.seoJsonld = "faq";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: homeFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    });
+    document.head.appendChild(faqScript);
+
     const businessScript = document.createElement("script");
     businessScript.type = "application/ld+json";
     businessScript.dataset.seoJsonld = "business";
@@ -92,9 +119,9 @@ export function useHomeSeo() {
       "@type": "HealthAndBeautyBusiness",
       name: BRAND,
       telephone: PHONE_DISPLAY,
-      url: `${ROOT_ORIGIN}/`,
+      url: canonical,
       areaServed: ["부산", "해운대", "서면", "수영", "동래"],
-      description: "부산 주요 지역 방문 케어 상담과 예약 안내를 제공하는 무브케어 공식 홈페이지입니다.",
+      description,
     });
     document.head.appendChild(businessScript);
   }, []);

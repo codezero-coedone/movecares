@@ -1,5 +1,6 @@
 import { useRouterState } from "@tanstack/react-router";
-import { getLandingHref, getMainHref, getPageByHostname, landingPages, PHONE_DISPLAY, PHONE_TEL, type FaqItem, type LandingPage, type ServiceItem, type StepItem } from "../data/landingPages";
+import { getLandingHref, getMainHref, landingPages, PHONE_DISPLAY, PHONE_TEL, type FaqItem, type LandingPage, type ServiceItem, type StepItem } from "../data/landingPages";
+import { getLandingPageByHost } from "../lib/hostMapping";
 import { Icon, LogoMark } from "./Icons";
 
 export function CallButton({ label = "전화 문의", dark = true, large = false }: { label?: string; dark?: boolean; large?: boolean }) {
@@ -22,7 +23,7 @@ export function CallButton({ label = "전화 문의", dark = true, large = false
 
 export function Header({ dense = false, compact = false }: { dense?: boolean; compact?: boolean }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
-  const hostPage = typeof window !== "undefined" ? getPageByHostname(window.location.hostname) : undefined;
+  const hostPage = typeof window !== "undefined" ? getLandingPageByHost(window.location.hostname) : undefined;
   const isActive = (page: LandingPage) => pathname === page.route || hostPage?.id === page.id;
   const navItems = landingPages.map((page) => ({ href: getLandingHref(page), page, label: page.h1.replace(" 출장 마사지", "") }));
 

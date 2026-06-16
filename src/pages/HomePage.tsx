@@ -1,6 +1,7 @@
 import { BRAND_SUB, PHONE_DISPLAY, PHONE_TEL, getLandingHref, landingPages } from "../data/landingPages";
+import { homeFaqs } from "../data/homeContent";
 import { useHomeSeo } from "../hooks/usePageSeo";
-import { CallButton, Header, LandingTabBar, SectionTitle, ServiceCard, StickyCallBar, TrustBadges } from "../components/Common";
+import { CallButton, FAQAccordion, Header, LandingTabBar, SectionTitle, ServiceCard, StickyCallBar, TrustBadges } from "../components/Common";
 import { HeroWellnessVisual } from "../components/HeroVisual";
 import { Icon, LogoMark } from "../components/Icons";
 
@@ -32,13 +33,9 @@ export function HomePage() {
                 <p className="mt-3 text-sm font-semibold tracking-[0.24em] text-warm">{BRAND_SUB}</p>
               </div>
               <p className="text-base font-semibold tracking-wide text-warm">MOVecares OFFICIAL</p>
-              <h1 className="mt-5 text-5xl font-semibold leading-[1.04] tracking-[-0.055em] text-text-main md:text-7xl">
-                부산 방문 케어를
-                <br />
-                지역별로 빠르게
-              </h1>
+              <h1 className="mt-5 text-5xl font-semibold leading-[1.04] tracking-[-0.055em] text-text-main md:text-7xl">부산 출장 마사지</h1>
               <p className="mt-6 max-w-[540px] text-lg leading-8 text-text-sub">
-                무브케어 공식 홈페이지입니다. 원하는 지역 랜딩으로 이동해 가능 지역, 상담 방식, 예약 절차를 확인하세요.
+                무브케어 공식 홈페이지입니다. 해운대, 서면, 수영, 동래 등 부산 주요 생활권의 방문 마사지 상담과 예약 절차를 한곳에서 확인하세요.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <CallButton label={`전화 문의 ${PHONE_DISPLAY}`} />
@@ -71,8 +68,8 @@ export function HomePage() {
           </div>
           <div className="grid gap-4 md:grid-cols-5">
             {landingPages.map((page) => (
-              <a key={page.id} href={getLandingHref(page)} className="group rounded-3xl border border-border-soft bg-white p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-border-mid">
-                <span className="text-xs font-bold tracking-[0.16em] text-warm">{page.subdomain}.MOVECARES.COM</span>
+              <a key={page.id} href={getLandingHref(page)} className="group overflow-hidden rounded-3xl border border-border-soft bg-white p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-border-mid">
+                <span className="break-all text-xs font-bold tracking-[0.16em] text-warm">{page.subdomain}.MOVECARES.COM</span>
                 <h2 className="mt-4 text-2xl font-bold tracking-[-0.04em] text-text-main">{page.h1.replace(" 출장 마사지", "")}</h2>
                 <p className="mt-3 min-h-[72px] text-sm leading-6 text-text-sub">{page.sub}</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-charcoal">
@@ -91,6 +88,10 @@ export function HomePage() {
               <ServiceCard key={item.title} item={item} />
             ))}
           </div>
+          <section className="grid gap-5">
+            <SectionTitle label="공식 안내 FAQ" />
+            <FAQAccordion items={homeFaqs} />
+          </section>
           <section className="rounded-[2rem] border border-border-mid bg-charcoal p-7 text-white shadow-cta md:flex md:items-center md:justify-between">
             <div>
               <p className="text-sm text-white/65">공식 대표 전화</p>

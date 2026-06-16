@@ -27,7 +27,7 @@ export function HeroWellnessVisual({ mode = "therapist" }: { mode?: "therapist" 
   return (
     <div className="movecare-hero-visual relative min-h-[318px] overflow-hidden rounded-[2.1rem] border border-white/75 bg-gradient-to-br from-white via-[#f7f3ed] to-[#e7ded1] md:min-h-[416px]">
       <div className="absolute inset-0 movecare-visual-grid" aria-hidden />
-      <div className="absolute right-0 -top-10 h-56 w-56 rounded-full bg-white/60 blur-2xl md:-right-12" aria-hidden />
+      <div className="absolute right-0 -top-10 h-56 w-56 rounded-full bg-white/60 blur-2xl" aria-hidden />
       <div className="absolute -left-16 bottom-4 h-56 w-56 rounded-full bg-[#f2dfbf]/56 blur-2xl" aria-hidden />
 
       <div className="absolute left-7 right-7 top-7 h-24 rounded-[1.6rem] border border-white/75 bg-white/42 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]" />

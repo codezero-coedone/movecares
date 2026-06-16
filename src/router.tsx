@@ -1,5 +1,6 @@
 import { createRootRoute, createRoute, createRouter, Outlet } from "@tanstack/react-router";
-import { getPageByHostname, landingPages } from "./data/landingPages";
+import { landingPages } from "./data/landingPages";
+import { getLandingPageByHost } from "./lib/hostMapping";
 import { HomePage } from "./pages/HomePage";
 import { LandingIndex } from "./pages/LandingIndex";
 import { LandingPageView } from "./pages/LandingPage";
@@ -14,7 +15,7 @@ const rootRoute = createRootRoute({
 });
 
 function RootEntry() {
-  const page = typeof window !== "undefined" ? getPageByHostname(window.location.hostname) : undefined;
+  const page = typeof window !== "undefined" ? getLandingPageByHost(window.location.hostname) : undefined;
   return page ? <LandingPageView page={page} /> : <HomePage />;
 }
 
