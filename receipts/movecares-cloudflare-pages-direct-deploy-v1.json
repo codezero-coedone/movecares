@@ -1,0 +1,45 @@
+{
+  "lock": "MOVECARES_CLOUDFLARE_PAGES_DIRECT_DEPLOY_V1",
+  "generatedAt": "2026-06-17T09:23:52.1111056Z",
+  "repo": "C:\\Users\\USER\\Desktop\\부산달리",
+  "remote": "https://github.com/codezero-coedone/movecares.git",
+  "commit": "c8d6626f4d2ae0bd9bf60a8aeb9086272ed20016",
+  "deployMode": "direct_wranger_pages_deploy_from_local_dist",
+  "projectName": "movecares",
+  "branch": "main",
+  "deploymentUrl": "https://b946d461.movecares.pages.dev",
+  "gates": {
+    "npmBuild": "PASS",
+    "npmSmokeSeo": "PASS",
+    "pagesDeploy": "PASS",
+    "pagesDevSitemap": "PASS_34_LOC",
+    "publicDomainSitemap": "PASS_34_LOC",
+    "publicSeoRoutes": "PASS",
+    "tokenRawLogged": false,
+    "sTxtRead": false
+  },
+  "publicEvidence": {
+    "pagesDevSitemap": {
+      "url": "https://b946d461.movecares.pages.dev/sitemap.xml",
+      "status": 200,
+      "locCount": 34,
+      "hasEncodedBusanRoute": true
+    },
+    "publicSitemap": {
+      "url": "https://movecares.com/sitemap.xml",
+      "status": 200,
+      "locCount": 34,
+      "hasEncodedBusanRoute": true,
+      "proxy": "cloudflare-worker"
+    },
+    "checkedRoutes": [
+      "https://b946d461.movecares.pages.dev/%EB%B6%80%EC%82%B0-%EC%B6%9C%EC%9E%A5%EB%A7%88%EC%82%AC%EC%A7%80/",
+      "https://movecares.com/%EB%B6%80%EC%82%B0-%EC%B6%9C%EC%9E%A5%EB%A7%88%EC%82%AC%EC%A7%80/",
+      "https://movecares.com/%ED%95%B4%EC%9A%B4%EB%8C%80-%EC%B6%9C%EC%9E%A5%EB%A7%88%EC%82%AC%EC%A7%80/"
+    ]
+  },
+  "remainingHold": [
+    "GitHub Actions automatic Pages deploy still needs Cloudflare API token secret in repository settings. Direct Cloudflare Pages deploy is PASS."
+  ],
+  "finalJudgment": "PASS_HOLD"
+}
