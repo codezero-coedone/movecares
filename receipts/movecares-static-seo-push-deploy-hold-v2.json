@@ -1,0 +1,15 @@
+{
+  "status": "PASS_PUSH_HOLD_CLOUDFLARE_DIRECT_DEPLOY_AUTH",
+  "checkedAt": "2026-06-17T08:56:17.2507325Z",
+  "repo": "C:\\Users\\USER\\Desktop\\부산달리",
+  "remote": "https://github.com/codezero-coedone/movecares.git",
+  "pushedCommit": "02e3d7c",
+  "push": "PASS",
+  "localBuild": "PASS",
+  "staticSeoSmoke": "PASS",
+  "distSitemapLocCount": 34,
+  "publicSitemapLocCount": 6,
+  "directDeploy": "HOLD_AUTH",
+  "holdReason": "wrangler requires CLOUDFLARE_API_TOKEN in non-interactive environment; token raw not read or printed",
+  "finalJudgment": "PASS_HOLD"
+}
