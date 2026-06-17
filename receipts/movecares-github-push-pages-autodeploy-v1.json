@@ -1,0 +1,38 @@
+{
+  "lock": "MOVECARES_GITHUB_PUSH_PAGES_AUTODEPLOY_V1",
+  "status": "PASS_WORKFLOW_PATCH_PENDING_REMOTE_RUN",
+  "repo": "C:\\Users\\USER\\Desktop\\부산달리",
+  "remote": "https://github.com/codezero-coedone/movecares.git",
+  "branch": "main",
+  "cloudflare": {
+    "projectName": "movecares",
+    "deployModeBefore": "direct_upload_manual",
+    "deployModeAfter": "github_push_runs_wrangler_direct_upload",
+    "accountIdSource": "existing deploy receipt",
+    "tokenSource": "GitHub Actions secret CLOUDFLARE_API_TOKEN",
+    "tokenRawOmitted": true
+  },
+  "workflow": {
+    "path": ".github/workflows/deploy-cloudflare-pages.yml",
+    "trigger": ["push main", "workflow_dispatch"],
+    "commands": [
+      "npm ci",
+      "npm run lint",
+      "npm run build",
+      "npm run smoke:seo",
+      "npx wrangler@4.100.0 pages deploy dist --project-name movecares --branch main --commit-dirty=true"
+    ]
+  },
+  "gates": {
+    "localBuildBeforeWorkflowPatch": "PASS",
+    "localStaticSeoSmokeBeforeWorkflowPatch": "PASS",
+    "githubPushAutodeployWorkflowAdded": "PASS",
+    "cloudflareTokenRawLogged": "NO",
+    "publicDeployReflection": "PENDING_NEXT_PUSH_OR_WORKFLOW_RUN"
+  },
+  "remainingHold": [
+    "GitHub repository must have secret CLOUDFLARE_API_TOKEN with Pages deploy permission.",
+    "After this workflow commit is pushed, confirm Actions run succeeds and movecares.com/sitemap.xml shows 34 loc entries."
+  ],
+  "finalJudgment": "PASS_HOLD"
+}
