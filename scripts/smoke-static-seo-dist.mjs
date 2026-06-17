@@ -5,6 +5,8 @@ const repoRoot = resolve(process.cwd());
 const distRoot = join(repoRoot, "dist");
 const receiptPath = join(repoRoot, "receipts", "movecares-static-seo-smoke-v2.json");
 const expectedOrigin = "https://movecares.com";
+const heroImagePath = join(distRoot, "images", "movecares-premium-wellness-hero.webp");
+const heroImageUrl = `${expectedOrigin}/images/movecares-premium-wellness-hero.webp`;
 const requiredRoutes = [
   "부산-출장마사지",
   "해운대-출장마사지",
@@ -35,11 +37,13 @@ const forbiddenPatterns = [
 
 const checks = [];
 await access(distRoot);
+await access(heroImagePath);
 const sitemap = await readFile(join(distRoot, "sitemap.xml"), "utf8");
 const robots = await readFile(join(distRoot, "robots.txt"), "utf8");
 checks.push(assert("sitemap has movecares origin", sitemap.includes(`${expectedOrigin}/`)));
 checks.push(assert("robots points sitemap", robots.includes(`Sitemap: ${expectedOrigin}/sitemap.xml`)));
 checks.push(assert("sitemap has expanded urls", (sitemap.match(/<url>/g) || []).length >= 30));
+checks.push(assert("premium hero image asset exists", true));
 
 for (const host of requiredHosts) {
   checks.push(assert(`sitemap host ${host}`, sitemap.includes(`<loc>${host}</loc>`)));
@@ -52,6 +56,8 @@ for (const route of requiredRoutes) {
   checks.push(assert(`${route} title`, /<title>[^<]+무브케어<\/title>/.test(html)));
   checks.push(assert(`${route} h1`, /<h1>[^<]+<\/h1>/.test(html)));
   checks.push(assert(`${route} canonical`, html.includes(`rel="canonical" href="${canonical}"`)));
+  checks.push(assert(`${route} og image`, html.includes(`property="og:image" content="${heroImageUrl}"`)));
+  checks.push(assert(`${route} twitter image`, html.includes(`name="twitter:image" content="${heroImageUrl}"`)));
   checks.push(assert(`${route} jsonld`, html.includes("application/ld+json")));
   checks.push(assert(`${route} static content`, html.includes("건전 웰니스") && html.includes("전화 문의")));
   checks.push(assert(`${route} no hydration overwrite script`, !html.includes('type="module"')));

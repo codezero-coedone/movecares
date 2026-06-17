@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { BRAND, PHONE_DISPLAY, ROOT_ORIGIN, getLandingCanonical, type LandingPage } from "../data/landingPages";
 import { homeFaqs } from "../data/homeContent";
 
+const HERO_IMAGE_URL = `${ROOT_ORIGIN}/images/movecares-premium-wellness-hero.webp`;
+
 export function usePageSeo(page: LandingPage) {
   useEffect(() => {
     const canonical = getLandingCanonical(page);
@@ -23,6 +25,11 @@ export function usePageSeo(page: LandingPage) {
     setMeta("property", "og:description", page.description);
     setMeta("property", "og:type", "website");
     setMeta("property", "og:url", canonical);
+    setMeta("property", "og:image", HERO_IMAGE_URL);
+    setMeta("property", "og:image:width", "1280");
+    setMeta("property", "og:image:height", "960");
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:image", HERO_IMAGE_URL);
 
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {
@@ -87,6 +94,11 @@ export function useHomeSeo() {
     setMeta("property", "og:description", description);
     setMeta("property", "og:type", "website");
     setMeta("property", "og:url", canonical);
+    setMeta("property", "og:image", HERO_IMAGE_URL);
+    setMeta("property", "og:image:width", "1280");
+    setMeta("property", "og:image:height", "960");
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:image", HERO_IMAGE_URL);
 
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {

@@ -39,7 +39,7 @@ export function HomePage() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <CallButton label={`전화 문의 ${PHONE_DISPLAY}`} />
-                <a href="#areas" className="inline-flex min-h-[54px] items-center justify-center gap-3 rounded-2xl border border-border-mid bg-white px-5 text-base font-semibold text-text-main">
+                <a href="#areas" className="inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-2xl border border-border-mid bg-white px-5 text-base font-semibold text-text-main sm:w-auto">
                   <Icon name="map" className="h-5 w-5" />
                   지역 선택
                 </a>

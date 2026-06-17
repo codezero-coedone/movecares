@@ -9,13 +9,13 @@ export function CallButton({ label = "전화 문의", dark = true, large = false
       href={PHONE_TEL}
       aria-label={`${label} ${PHONE_DISPLAY}`}
       className={[
-        "inline-flex items-center justify-center gap-3 rounded-[1.15rem] border px-5 font-extrabold tracking-[-0.02em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm active:scale-[0.99]",
+        "inline-flex w-full min-w-0 max-w-full items-center justify-center gap-3 rounded-[1.15rem] border px-5 font-extrabold tracking-[-0.02em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm active:scale-[0.99] sm:w-auto",
         large ? "min-h-[64px] text-lg" : "min-h-[54px] text-base",
         dark ? "border-charcoal bg-charcoal text-white shadow-cta hover:bg-[#121417]" : "border-border-mid bg-white/88 text-text-main shadow-[0_10px_28px_rgba(35,38,43,0.055)] hover:border-warm/60",
       ].join(" ")}
     >
       <Icon name="phone" className="h-5 w-5" />
-      <span>{label}</span>
+      <span className="truncate">{label}</span>
       {large && <span className="font-bold tracking-wide">{PHONE_DISPLAY}</span>}
     </a>
   );
@@ -51,13 +51,13 @@ export function Header({ dense = false, compact = false }: { dense?: boolean; co
             <span className="text-xs text-text-muted">운영 가능 시간 상담</span>
           </a>
         ) : null}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {!dense && <a href={PHONE_TEL} className="hidden rounded-[1.05rem] bg-charcoal px-4 py-3 text-sm font-extrabold text-white shadow-cta sm:inline-flex">전화 문의</a>}
+        {!dense && <div className="flex items-center gap-2 sm:gap-3">
+          <a href={PHONE_TEL} className="hidden rounded-[1.05rem] bg-charcoal px-4 py-3 text-sm font-extrabold text-white shadow-cta sm:inline-flex">전화 문의</a>
           <a href={PHONE_TEL} className="inline-flex min-h-11 items-center gap-2 rounded-[1.05rem] border border-border-mid bg-white/88 px-3 text-sm font-extrabold text-charcoal shadow-[0_10px_24px_rgba(35,38,43,0.055)] sm:hidden" aria-label={`전화 문의 ${PHONE_DISPLAY}`}>
             <Icon name="phone" className="h-4 w-4" />
             전화
           </a>
-        </div>
+        </div>}
       </div>
     </header>
   );

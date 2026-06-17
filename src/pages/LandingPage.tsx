@@ -9,7 +9,7 @@ function AnchorButton({ href, label }: { href: string; label: string }) {
   return (
     <a
       href={href}
-      className="inline-flex min-h-[54px] items-center justify-center rounded-[1.15rem] border border-border-mid bg-white/88 px-5 text-base font-extrabold tracking-[-0.02em] text-text-main shadow-[0_10px_28px_rgba(35,38,43,0.055)] transition hover:border-warm/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm active:scale-[0.99]"
+      className="inline-flex min-h-[54px] w-full items-center justify-center rounded-[1.15rem] border border-border-mid bg-white/88 px-5 text-center text-base font-extrabold tracking-[-0.02em] text-text-main shadow-[0_10px_28px_rgba(35,38,43,0.055)] transition hover:border-warm/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-warm active:scale-[0.99] sm:w-auto"
     >
       {label}
     </a>

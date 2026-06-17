@@ -6,6 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, "..");
 const distRoot = resolve(repoRoot, "dist");
 const siteOrigin = "https://movecares.com";
+const heroImageUrl = `${siteOrigin}/images/movecares-premium-wellness-hero.webp`;
 const generatedAt = new Date().toISOString();
 const phoneDisplay = "010-6782-5758";
 const phoneHref = "tel:01067825758";
@@ -143,7 +144,12 @@ function renderSeoPage(page, styleTags) {
     <meta property="og:description" content="${escapeAttr(description)}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${escapeAttr(canonical)}" />
+    <meta property="og:image" content="${escapeAttr(heroImageUrl)}" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="960" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="${escapeAttr(heroImageUrl)}" />
+    <link rel="preload" as="image" href="/images/movecares-premium-wellness-hero.webp" />
     ${styleTags}
     <style>
       body { margin: 0; background: #f8f3eb; color: #23262b; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }

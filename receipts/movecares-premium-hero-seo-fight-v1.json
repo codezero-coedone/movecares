@@ -1,0 +1,54 @@
+{
+  "lock": "MOVECARES_PREMIUM_HERO_SEO_FIGHT_V1",
+  "generatedAt": "2026-06-17T09:56:41.2711368Z",
+  "repo": "C:\\Users\\USER\\Desktop\\부산달리",
+  "headBeforeCommit": "6a61dc4",
+  "publicDomain": "https://movecares.com",
+  "cloudflarePagesDeploy": "https://b52d9ff1.movecares.pages.dev",
+  "changedScope": [
+    "public/images",
+    "src/components",
+    "src/pages",
+    "src/hooks",
+    "scripts",
+    "receipts"
+  ],
+  "heroImage": {
+    "path": "public/images/movecares-premium-wellness-hero.webp",
+    "width": 1280,
+    "height": 960,
+    "bytes": 95486,
+    "sha256": "6BBB83F491A6D08A1E968FF390D68D6A741BB11321E8A3D8B0191378C773E110",
+    "description": "premium wellness room with Busan ocean skyline, no people, no nudity, no text"
+  },
+  "seo": {
+    "ogImage": "https://movecares.com/images/movecares-premium-wellness-hero.webp",
+    "twitterImage": "https://movecares.com/images/movecares-premium-wellness-hero.webp",
+    "staticSeoPages": "og:image and twitter:image emitted by scripts/generate-static-seo-pages.mjs",
+    "sitemapLocCount": 34
+  },
+  "gates": {
+    "lint": "PASS",
+    "build": "PASS",
+    "smokeSeo": "PASS",
+    "cloudflarePagesDeploy": "PASS",
+    "pagesSitemap": "PASS 200 34 loc",
+    "pagesHeroImage": "PASS 200 image/webp 95486 bytes",
+    "pagesStaticLanding": "PASS 200 hero meta + JSON-LD",
+    "domainSitemap": "PASS 200 34 loc via cloudflare-worker",
+    "domainHeroImage": "PASS 200 image/webp 95486 bytes via cloudflare-worker",
+    "domainStaticLanding": "PASS 200 hero meta + JSON-LD via cloudflare-worker",
+    "localDesktopScreenshot": "PASS receipts/movecares-premium-hero-local-1440.png",
+    "localMobileScreenshot": "PASS receipts/movecares-premium-hero-local-390.png",
+    "publicDesktopScreenshot": "PASS receipts/movecares-premium-hero-public-1440.png",
+    "publicMobileScreenshot": "PASS receipts/movecares-premium-hero-public-390.png",
+    "tokenRawLogged": false,
+    "sTxtRead": false,
+    "fakeConnected": false
+  },
+  "remainingHold": [
+    "Google ranking itself is not claimable as PASS; technical SEO/public deploy is PASS.",
+    "GitHub Actions Cloudflare deploy remains HOLD until repository secret is configured; direct Pages deploy is PASS."
+  ],
+  "finalJudgment": "PASS_HOLD"
+}

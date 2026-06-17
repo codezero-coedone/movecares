@@ -1,6 +1,6 @@
 {
   "status": "PASS_STATIC_SEO_DIST_SMOKE",
-  "checkedAt": "2026-06-17T09:22:24.557Z",
+  "checkedAt": "2026-06-17T09:53:05.961Z",
   "distRoot": "C:\\Users\\USER\\Desktop\\부산달리\\dist",
   "expectedOrigin": "https://movecares.com",
   "requiredRoutes": [
@@ -32,6 +32,10 @@
     },
     {
       "name": "sitemap has expanded urls",
+      "pass": true
+    },
+    {
+      "name": "premium hero image asset exists",
       "pass": true
     },
     {
@@ -68,6 +72,14 @@
     },
     {
       "name": "부산-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 og image",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 twitter image",
       "pass": true
     },
     {
@@ -123,6 +135,14 @@
       "pass": true
     },
     {
+      "name": "해운대-출장마사지 og image",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 twitter image",
+      "pass": true
+    },
+    {
       "name": "해운대-출장마사지 jsonld",
       "pass": true
     },
@@ -172,6 +192,14 @@
     },
     {
       "name": "서면-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 og image",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 twitter image",
       "pass": true
     },
     {
@@ -227,6 +255,14 @@
       "pass": true
     },
     {
+      "name": "광안리-출장마사지 og image",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 twitter image",
+      "pass": true
+    },
+    {
       "name": "광안리-출장마사지 jsonld",
       "pass": true
     },
@@ -276,6 +312,14 @@
     },
     {
       "name": "동래-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 og image",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 twitter image",
       "pass": true
     },
     {
@@ -331,6 +375,14 @@
       "pass": true
     },
     {
+      "name": "부산-출장마사지-예약 og image",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 twitter image",
+      "pass": true
+    },
+    {
       "name": "부산-출장마사지-예약 jsonld",
       "pass": true
     },
@@ -383,6 +435,14 @@
       "pass": true
     },
     {
+      "name": "부산-출장마사지-가격 og image",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 twitter image",
+      "pass": true
+    },
+    {
       "name": "부산-출장마사지-가격 jsonld",
       "pass": true
     },
@@ -432,6 +492,14 @@
     },
     {
       "name": "부산-호텔방문마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 og image",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 twitter image",
       "pass": true
     },
     {
