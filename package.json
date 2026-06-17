@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && node scripts/generate-static-seo-pages.mjs",
     "lint": "tsc --noEmit",
+    "smoke:seo": "node scripts/smoke-static-seo-dist.mjs",
     "deploy:cf": "npm run build && wrangler pages deploy dist --project-name movecares --branch main --commit-dirty=true",
     "deploy:cf:worker": "wrangler deploy workers/movecares-domain-proxy.js --name movecares-domain-proxy --compatibility-date 2026-06-15 --route movecares.com/* --route www.movecares.com/* --route busan.movecares.com/* --route haeundae.movecares.com/* --route seomyeon.movecares.com/* --route suyeong.movecares.com/* --route dongnae.movecares.com/*"
   },

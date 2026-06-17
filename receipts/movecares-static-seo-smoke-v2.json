@@ -1,0 +1,535 @@
+{
+  "status": "PASS_STATIC_SEO_DIST_SMOKE",
+  "checkedAt": "2026-06-17T08:45:00.431Z",
+  "distRoot": "C:\\Users\\USER\\Desktop\\부산달리\\dist",
+  "expectedOrigin": "https://movecares.com",
+  "requiredRoutes": [
+    "부산-출장마사지",
+    "해운대-출장마사지",
+    "서면-출장마사지",
+    "광안리-출장마사지",
+    "동래-출장마사지",
+    "부산-출장마사지-예약",
+    "부산-출장마사지-가격",
+    "부산-호텔방문마사지"
+  ],
+  "requiredHosts": [
+    "https://movecares.com/",
+    "https://busan.movecares.com/",
+    "https://haeundae.movecares.com/",
+    "https://seomyeon.movecares.com/",
+    "https://suyeong.movecares.com/",
+    "https://dongnae.movecares.com/"
+  ],
+  "checks": [
+    {
+      "name": "sitemap has movecares origin",
+      "pass": true
+    },
+    {
+      "name": "robots points sitemap",
+      "pass": true
+    },
+    {
+      "name": "sitemap has expanded urls",
+      "pass": true
+    },
+    {
+      "name": "sitemap host https://movecares.com/",
+      "pass": true
+    },
+    {
+      "name": "sitemap host https://busan.movecares.com/",
+      "pass": true
+    },
+    {
+      "name": "sitemap host https://haeundae.movecares.com/",
+      "pass": true
+    },
+    {
+      "name": "sitemap host https://seomyeon.movecares.com/",
+      "pass": true
+    },
+    {
+      "name": "sitemap host https://suyeong.movecares.com/",
+      "pass": true
+    },
+    {
+      "name": "sitemap host https://dongnae.movecares.com/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 title",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 h1",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 jsonld",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 static content",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 title",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 h1",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 jsonld",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 static content",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "해운대-출장마사지 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 title",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 h1",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 jsonld",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 static content",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "서면-출장마사지 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 title",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 h1",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 jsonld",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 static content",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "광안리-출장마사지 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 title",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 h1",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 jsonld",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 static content",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "동래-출장마사지 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 title",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 h1",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 canonical",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 jsonld",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 static content",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-예약 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 title",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 h1",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 canonical",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 jsonld",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 static content",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "부산-출장마사지-가격 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 title",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 h1",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 canonical",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 jsonld",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 static content",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no hydration overwrite script",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "부산-호텔방문마사지 no /20대/",
+      "pass": true
+    },
+    {
+      "name": "sitemap no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "robots no /TODO_DOMAIN/i",
+      "pass": true
+    },
+    {
+      "name": "sitemap no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "robots no /<loc>\\/<\\/loc>/",
+      "pass": true
+    },
+    {
+      "name": "sitemap no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "robots no /window\\.location\\.origin/",
+      "pass": true
+    },
+    {
+      "name": "sitemap no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "robots no /태국미녀/",
+      "pass": true
+    },
+    {
+      "name": "sitemap no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "robots no /내상제로/",
+      "pass": true
+    },
+    {
+      "name": "sitemap no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "robots no /NF영입/",
+      "pass": true
+    },
+    {
+      "name": "sitemap no /20대/",
+      "pass": true
+    },
+    {
+      "name": "robots no /20대/",
+      "pass": true
+    }
+  ],
+  "finalJudgment": "PASS"
+}
