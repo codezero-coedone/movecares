@@ -16,7 +16,7 @@
     "path": ".github/workflows/deploy-cloudflare-pages.yml",
     "trigger": ["push main", "workflow_dispatch"],
     "commands": [
-      "npm ci",
+      "npm install",
       "npm run lint",
       "npm run build",
       "npm run smoke:seo",
@@ -27,6 +27,7 @@
     "localBuildBeforeWorkflowPatch": "PASS",
     "localStaticSeoSmokeBeforeWorkflowPatch": "PASS",
     "githubPushAutodeployWorkflowAdded": "PASS",
+    "githubActionsInstallStep": "npm install",
     "cloudflareTokenRawLogged": "NO",
     "publicDeployReflection": "PENDING_NEXT_PUSH_OR_WORKFLOW_RUN"
   },
