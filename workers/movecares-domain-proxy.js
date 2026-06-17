@@ -9,6 +9,36 @@ const LANDING_HOSTS = [
   "suyeong.movecares.com",
   "dongnae.movecares.com",
 ];
+const STATIC_SEO_SLUGS = [
+  "부산-출장마사지",
+  "해운대-출장마사지",
+  "서면-출장마사지",
+  "광안리-출장마사지",
+  "수영-출장마사지",
+  "동래-출장마사지",
+  "남포동-출장마사지",
+  "사상-출장마사지",
+  "연산동-출장마사지",
+  "기장-출장마사지",
+  "사하-출장마사지",
+  "센텀-출장마사지",
+  "부산진구-출장마사지",
+  "금정구-출장마사지",
+  "북구-출장마사지",
+  "강서구-출장마사지",
+  "영도-출장마사지",
+  "송정-출장마사지",
+  "마린시티-출장마사지",
+  "광복동-출장마사지",
+  "부산-아로마마사지",
+  "부산-스포츠마사지",
+  "부산-목어깨마사지",
+  "부산-호텔방문마사지",
+  "부산-방문마사지",
+  "부산-출장마사지-가격",
+  "부산-출장마사지-예약",
+  "부산-마사지-예약상담",
+];
 
 const COMMON_BUSINESS = {
   "@context": "https://schema.org",
@@ -128,7 +158,13 @@ function canonicalHost(hostname) {
 
 function sitemapForHost(hostname) {
   const host = canonicalHost(hostname);
-  const urls = host === ROOT_HOST ? [`https://${ROOT_HOST}/`, ...LANDING_HOSTS.map((item) => `https://${item}/`)] : [`https://${host}/`];
+  const urls = host === ROOT_HOST
+    ? [
+        `https://${ROOT_HOST}/`,
+        ...LANDING_HOSTS.map((item) => `https://${item}/`),
+        ...STATIC_SEO_SLUGS.map((slug) => `https://${ROOT_HOST}/${encodeURI(slug)}/`),
+      ]
+    : [`https://${host}/`];
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
     .map((url) => `  <url><loc>${url}</loc></url>`)
     .join("\n")}\n</urlset>\n`;

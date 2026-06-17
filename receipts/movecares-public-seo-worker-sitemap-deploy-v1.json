@@ -1,0 +1,65 @@
+{
+  "lock": "MOVECARES_PUBLIC_SEO_WORKER_SITEMAP_DEPLOY_V1",
+  "generatedAt": "2026-06-17T09:17:31.4146571Z",
+  "repo": "C:\\Users\\USER\\Desktop\\부산달리",
+  "remote": "https://github.com/codezero-coedone/movecares.git",
+  "commitBeforePush": "c848f1e9113d05eede5acf8063f53507fe1a2d36",
+  "pagesDeploymentUrl": "https://d9106b0e.movecares.pages.dev",
+  "worker": {
+    "name": "movecares-domain-proxy",
+    "versionId": "c3ddec56-5ae9-4697-a719-4e7eb29b1c2d",
+    "routes": [
+      "movecares.com/*",
+      "www.movecares.com/*",
+      "busan.movecares.com/*",
+      "haeundae.movecares.com/*",
+      "seomyeon.movecares.com/*",
+      "suyeong.movecares.com/*",
+      "dongnae.movecares.com/*"
+    ]
+  },
+  "gates": {
+    "workerSyntax": "PASS",
+    "localWorkerSitemapSimulation": "PASS_34_LOC",
+    "npmLint": "PASS",
+    "npmBuild": "PASS",
+    "npmSmokeSeo": "PASS",
+    "pagesDevSitemap": "PASS_34_LOC",
+    "publicDomainSitemap": "PASS_34_LOC",
+    "publicSeoRoutes": "PASS_4_OF_4_HTTP_200_JSONLD_STATIC",
+    "tokenRawLogged": false,
+    "sTxtRead": false
+  },
+  "publicEvidence": {
+    "sitemap": {
+      "url": "https://movecares.com/sitemap.xml",
+      "status": 200,
+      "locCount": 34,
+      "hasEncodedBusanRoute": true,
+      "proxy": "cloudflare-worker"
+    },
+    "wwwSitemap": {
+      "url": "https://www.movecares.com/sitemap.xml",
+      "status": 200,
+      "locCount": 34,
+      "hasEncodedBusanRoute": true,
+      "proxy": "cloudflare-worker"
+    },
+    "robots": {
+      "url": "https://movecares.com/robots.txt",
+      "status": 200,
+      "hasSitemap": true,
+      "proxy": "cloudflare-worker"
+    },
+    "checkedRoutes": [
+      "https://movecares.com/%EB%B6%80%EC%82%B0-%EC%B6%9C%EC%9E%A5%EB%A7%88%EC%82%AC%EC%A7%80/",
+      "https://movecares.com/%ED%95%B4%EC%9A%B4%EB%8C%80-%EC%B6%9C%EC%9E%A5%EB%A7%88%EC%82%AC%EC%A7%80/",
+      "https://movecares.com/%EC%84%9C%EB%A9%B4-%EC%B6%9C%EC%9E%A5%EB%A7%88%EC%82%AC%EC%A7%80/",
+      "https://movecares.com/%EA%B4%91%EC%95%88%EB%A6%AC-%EC%B6%9C%EC%9E%A5%EB%A7%88%EC%82%AC%EC%A7%80/"
+    ]
+  },
+  "remainingHold": [
+    "GitHub Actions Pages deploy still needs a repository secret named CLOUDFLARE_API_TOKEN, CF_API_TOKEN, or CLOUDFLARE_PAGES_TOKEN. Current pushed workflow build/smoke passed but deploy step failed without repo secret."
+  ],
+  "finalJudgment": "PASS_HOLD"
+}
